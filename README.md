@@ -27,6 +27,28 @@ the function and run automatically when you commit through a GitHub action.
 What is the worst-case big $\Theta$ complexity of your implementation? Add your
 answer, including your reasoning, to this markdown file.
 
+### Runtime Analysis of DFS:
+
+To measure how long the Depth-First Search takes to run, we take a look at the number of steps required to check every connection and node in a graph. The time this takes revolves around: how many nodes (V) there are and how many connections (E) there are between those nodes.
+
+**DFS Time Complexity**:
+
+The worst-case time complexity for DFS is $Θ(V+E)$, indicating a linear relationship with the sum of the graph's vertices and edges.
+
+**Explanation**:
+
+- **Visiting Nodes(V)**: DFS goes through each node once. By keeping track of which nodes we've already visited, we make sure not to check the same node more than once. This part of the process contributes $O(V)$ to the total time since the operation of adding to and checking the visited set has constant time complexity, and this is done for each vertex.
+  
+- **Exploring Edges(E)**: For every vertex, DFS explores all outgoing edges to traverse the graph. In an adjacency list representation, the total number of explorations across all vertices corresponds to the total number of edges in the graph $E$. Each edge is considered exactly once in an undirected graph (or twice in a directed graph). This exploration contributes $O(E)$ to the total time complexity.
+  
+- **Overall Complexity**: Since the algorithm sequentially visits vertices and explores edges, the total time complexity combines both, resulting in $O(V + E)$. The notation $Θ(V + E) means that, in the worst case scenario, the time it really takes is directly related to the size and complexity of the graph so both the number of nodes and the number of connections between them.
+
+**Space Needed**:
+
+The space DFS needs mainly comes from two things: the memory needed to keep track of which nodes we've visited and the memory used by the computer to manage the recursion (the process of the function calling itself). In the worst case, this could be as much as needing space for every node in the graph, which is $O(V)$. So, the most space it would need is $O(V)$, because of the memory for visited nodes and the recursion.
+
+In simpler terms, DFS's time to run is mostly about how many nodes and connections the graph has. The more there are, the longer it will take. And the amount of computer memory it uses is mostly about how many nodes there are in the graph.
+
 ## Bonus
 
 Implement and analyze breadth-first search.
