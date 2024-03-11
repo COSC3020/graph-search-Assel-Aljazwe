@@ -65,3 +65,6 @@ The worst-case time complexity for BFS is also $Θ(V + E)$, so a linear relation
 
 **Space Complexity**:
 The space BFS needs mainly comes from two things: The queue (which helps us keep track of which node to visit next) and the record of which nodes we've already visitied. In the worst case scenario, this could mean we need space for a large number of nodes at once, especially in dense graphs. Therefore, the most space BFS could need is $O(V)$, considering both the queue and the visited record.
+
+
+Reference: https://www.tutorialspoint.com/difference-between-bfs-and-dfs#:~:text=Time%20Complexity%20of%20BFS%20%3D%20O,vertices%20and%20E%20is%20edges.&text=BFS%20requires%20more%20memory%20space,DFS%20requires%20less%20memory%20space.
